@@ -1,6 +1,6 @@
 const { useEffect, useMemo, useState } = React;
 
-const TEAM_MEMBERS = ["Jeremy", "Mohan", "May", "Isabella"];
+const TEAM_MEMBERS = ["A", "B", "C", "D"];
 
 const today = new Date();
 
@@ -43,7 +43,7 @@ const statusClasses = {
 };
 
 function App() {
-  const [selectedUser, setSelectedUser] = useState("Jeremy");
+  const [selectedUser, setSelectedUser] = useState("A");
   const [scope, setScope] = useState("mine");
   const [filters, setFilters] = useState({
     teamMember: "all",
@@ -58,7 +58,7 @@ function App() {
   const [tasks, setTasks] = useState(MOCK_TASKS);
   const [selectedTaskId, setSelectedTaskId] = useState(null);
   const [isFormOpen, setIsFormOpen] = useState(false);
-  const [form, setForm] = useState(emptyForm("Jeremy"));
+  const [form, setForm] = useState(emptyForm("A"));
   const [calendarDate, setCalendarDate] = useState(new Date(today.getFullYear(), today.getMonth(), 1));
 
   useEffect(() => {
@@ -205,7 +205,7 @@ function App() {
             <div className="mb-5 flex flex-col gap-4 border-b border-slate-200 pb-5 xl:flex-row xl:items-end xl:justify-between">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-700">
-                  STA Market Intelligence Team Task Dashboard
+                  Team Task Dashboard
                 </p>
                 <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-950">
                   Monthly task calendar
